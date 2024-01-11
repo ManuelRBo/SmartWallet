@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/SmartWallet/public/css/globales.css" />
-    <link rel="stylesheet" href="/SmartWallet/public/css/transacciones.css" />
-    <link rel="stylesheet" href="/SmartWallet/public/css/conjuntoGastos.css" />
+    <link rel="stylesheet" href="css/globales.css" />
+    <link rel="stylesheet" href="css/transacciones.css" />
+    <link rel="stylesheet" href="css/conjuntoGastos.css" />
     <title>Transacciones</title>
   </head>
   <body>
-    <a href="#" class="flecha-atras"></a>
+    <a href="home.html" class="flecha-atras"></a>
     <div class="contenedor">
       <h1>Transacciones</h1>
       <form action="">
@@ -19,120 +19,133 @@
             placeholder="Categoría, titulo, descripción ...."
           />
           <button type="submit">
-            <img src="/SmartWallet/public/img/lupa.svg" alt="Buscar" />
+            <img src="img/lupa.svg" alt="Buscar" />
           </button>
         </div>
         <div class="filtros">
-          <select name="" id="">
-            <option value="">Categoria</option>
-            <option value="">Categoria</option>
-            <option value="">Categoria</option>
+          <select name="categoria" id="categoria">
+            <option value="" disabled selected>Categoria</option>
+            <option value="Suscripcion">Suscripcion</option>
+            <option value="Compra">Compra</option>
+            <option value="Transferencias">Transferencias</option>
+            <option value="transporte">Transporte</option>
           </select>
-          <select name="" id="">
-            <option value="">Titulo</option>
-            <option value="">Titulo</option>
-            <option value="">Titulo</option>
+          <select name="titulo" id="titulo">
+            <option value="" disabled selected>Titulo</option>
+            <option value="spotify">Spotify</option>
+            <option value="Mercadona">Mercadona</option>
+            <option value="Netflix">Netflix</option>
           </select>
-          <select name="" id="">
-            <option value="">Precio</option>
-            <option value="">Precio</option>
-            <option value="">Precio</option>
+          <select name="precio" id="precio">
+            <option value="" disabled selected>Precio</option>
+            <option value="0-10">0-10€</option>
+            <option value="11-50">11-50€</option>
+            <option value="51-100">51-100€</option>
           </select>
-          <select name="" id="">
-            <option value="">Fecha</option>
-            <option value="">Fecha</option>
-            <option value="">Fecha</option>
+          <select name="fecha" id="fecha">
+            <option value="" disabled selected>Fecha</option>
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
           </select>
         </div>
       </form>
       <main>
-          <div class="conjunto-transaccion">
-            <div class="gasto">
-              <div class="icono-titulo">
-                <div class="fondoProducto">
-                  <img
-                    src="/SmartWallet/public/img/iconosProductos/spotify.svg"
-                    alt="Spotify"
-                  />
-                </div>
-                <div class="titulo-fecha">
-                  <p>Spotify</p>
-                  <p>10 Noviembre</p>
-                </div>
+        <div class="conjunto-transaccion">
+          <div class="gasto">
+            <div class="icono-titulo">
+              <div class="fondoProducto">
+                <img src="img/iconosProductos/spotify.svg" alt="Spotify" width="45" height="45">
               </div>
-              <div class="dinero">
-                <p>-9,99€</p>
-                <p>Suscripcion</p>
+              <div class="titulo-fecha">
+                <p>Spotify</p>
+                <p>10 Noviembre</p>
               </div>
             </div>
-            <div class="linea"></div>
+            <div class="dinero">
+              <p>-9,99€</p>
+              <p>Suscripcion</p>
+            </div>
           </div>
-
-          <div class="conjunto-transaccion">
-            <div class="gasto">
-              <div class="icono-titulo">
-                <div class="fondoProducto">
-                  <img
-                    src="/SmartWallet/public/img/iconosProductos/spotify.svg"
-                    alt="Spotify"
-                  />
-                </div>
-                <div class="titulo-fecha">
-                  <p>Spotify</p>
-                  <p>10 Noviembre</p>
-                </div>
+          <div class="linea"></div>
+        </div>
+  
+        <div class="conjunto-transaccion">
+          <div class="gasto">
+            <div class="icono-titulo">
+              <div class="fondoProducto" style="background-color: #fff;">
+                <img src="img/iconosProductos/amazon.svg" alt="Amazon" width="45" height="45">
               </div>
-              <div class="dinero">
-                <p>-9,99€</p>
-                <p>Suscripcion</p>
+              <div class="titulo-fecha">
+                <p>Amazon</p>
+                <p>1 Noviembre</p>
               </div>
             </div>
-            <div class="linea"></div>
+            <div class="dinero">
+              <p>-49,99€</p>
+              <p>Compra</p>
+            </div>
           </div>
-
-          <div class="conjunto-transaccion">
-            <div class="gasto">
-              <div class="icono-titulo">
-                <div class="fondoProducto">
-                  <img
-                    src="/SmartWallet/public/img/iconosProductos/spotify.svg"
-                    alt="Spotify"
-                  />
-                </div>
-                <div class="titulo-fecha">
-                  <p>Spotify</p>
-                  <p>10 Noviembre</p>
-                </div>
-              </div>
-              <div class="dinero">
-                <p>-9,99€</p>
-                <p>Suscripcion</p>
+          <div class="linea"></div>
+        </div>
+  
+        <div class="conjunto-transaccion">
+          <div class="gasto">
+            <div class="icono-titulo">
+              <div class="fondoProducto" style="background-color: #fff;">
+                <img src="img/iconosProductos/apple.svg" alt="Apple" width="45" height="45">
+             </div>
+              <div class="titulo-fecha">
+                <p>Apple</p>
+                <p>25 Octubre</p>
               </div>
             </div>
-            <div class="linea"></div>
+            <div class="dinero">
+              <p>-799€</p>
+              <p>Compra</p>
+            </div>
           </div>
-
-          <div class="conjunto-transaccion">
-            <div class="gasto">
-              <div class="icono-titulo">
-                <div class="fondoProducto">
-                  <img
-                    src="/SmartWallet/public/img/iconosProductos/spotify.svg"
-                    alt="Spotify"
-                  />
-                </div>
-                <div class="titulo-fecha">
-                  <p>Spotify</p>
-                  <p>10 Noviembre</p>
-                </div>
+          <div class="linea"></div>
+        </div>
+  
+        <div class="conjunto-transaccion">
+          <div class="gasto">
+            <div class="icono-titulo">
+              <div class="fondoProducto" style="background-color: rgba(25, 195, 125, 0.32);">
+                <img src="img/iconosProductos/chatgpt.svg" alt="ChatGPT" width="45" height="45">
               </div>
-              <div class="dinero">
-                <p>-9,99€</p>
-                <p>Suscripcion</p>
+              <div class="titulo-fecha">
+                <p>Chatgpt</p>
+                <p>1 Ocutbre</p>
               </div>
             </div>
-            <div class="linea"></div>
+            <div class="dinero">
+              <p>-19,99€</p>
+              <p>Suscripcion</p>
+            </div>
           </div>
+          <div class="linea"></div>
+        </div>
+  
+        <div class="conjunto-transaccion">
+          <div class="gasto">
+            <div class="icono-titulo">
+              <div class="fondoProducto" style="background-color: rgba(79, 70, 229, 0.32);">
+                <img src="img/iconosProductos/comercio.svg" alt="Cesta" width="45" height="45">
+              </div>
+              <div class="titulo-fecha">
+                <p>Mercadona</p>
+                <p>29 Septiembre</p>
+              </div>
+            </div>
+            <div class="dinero">
+              <p>-80€</p>
+              <p>Compra</p>
+            </div>
+          </div>
+          <div class="linea"></div>
+        </div>
       </main>
     </div>
   </body>

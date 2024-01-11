@@ -7,7 +7,7 @@
 
     & .gasto {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
 
       & .icono-titulo {
@@ -54,6 +54,7 @@
           font-size: 1.2rem;
           font-weight: 400;
           color: #acacac;
+          text-align: right;
         }
       }
     }
@@ -70,6 +71,8 @@
 @media (min-width: 768px) {
 
     .conjunto-transaccion {
+      column-gap: 80px;
+      
       & .gasto {
         & .icono-titulo {
           gap: 20px;
