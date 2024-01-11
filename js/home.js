@@ -1,11 +1,12 @@
-
 // Mostramos el formulario
 const botonAñadir = document.getElementById("botonAñadir");
 botonAñadir.addEventListener("click", () => {
   document.querySelector(".opcionAñadir").style.display = "flex";
   document.getElementById("overlay").style.display = "block";
+  document.documentElement.scrollTop = 0;
+  document.body.style.overflow = "hidden";
 
-  // HAcemos que los colores y los iconos sean seleccionables y sepan cual han seleccionado
+  // Hacemos que los colores y los iconos sean seleccionables y sepan cual han seleccionado
   const formularioAñadir = document.getElementById("formularioAñadir");
   const resultado = document.querySelector(".resultadoIcono");
   const fondoColores = formularioAñadir.elements.fondoColores;
@@ -32,24 +33,71 @@ botonAñadir.addEventListener("click", () => {
       icon.classList.add("pinchado");
       resultado.innerHTML = `<img src="../img/iconosProductos/${icon.value}.svg"alt="${icon.value}">`;
       document.getElementById("iconoInput").value = icon.value;
-
     });
   });
 
   formularioAñadir.addEventListener("change", () => {
-    if(formularioAñadir.elements.tipo.value == "ingreso"){
+    if (formularioAñadir.elements.tipo.value == "ingreso") {
       document.getElementById("ahorrar").removeAttribute("style");
-    }else if(formularioAñadir.elements.tipo.value == "gasto"){
+    } else if (formularioAñadir.elements.tipo.value == "gasto") {
       document.getElementById("ahorrar").style.display = "none";
     }
   });
 });
-
 
 // Cerramos el formulario al pinchar en el boton de flecha atras
 const botonCerrar = document.querySelector(".cerrar");
 botonCerrar.addEventListener("click", () => {
   document.querySelector(".opcionAñadir").style.display = "none";
   document.getElementById("overlay").style.display = "none";
+  document.body.style.overflow = "auto";
   formularioAñadir.reset();
+});
+
+document.getElementById("cerrarSesion").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "index.html";
+});
+
+formularioAñadir.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let vacio = false;
+  const mensaje = document.querySelector("#mensaje");
+  const array = [
+    formularioAñadir.elements.tipo.value,
+    formularioAñadir.elements.titulo.value,
+    formularioAñadir.elements.fecha.value,
+    formularioAñadir.elements.importe.value,
+    formularioAñadir.elements.categoria.value,
+    formularioAñadir.elements.fondoColoresInput.value,
+    formularioAñadir.elements.iconoInput.value,
+  ];
+
+  array.forEach((element) => {
+    console.log(element);
+    if (element == "") {
+      vacio = true;
+    } else {
+      vacio = false;
+    }
+  });
+
+  if (vacio) {
+    mensaje.innerHTML = "Rellena todos los campos";
+    mensaje.classList.add("errores");
+    mensaje.style.display = "block";
+  } else {
+    mensaje.innerHTML = "Añadido correctamente";
+    mensaje.classList.add("exito");
+    mensaje.style.display = "block";
+    formularioAñadir.reset();
+    const fondoColores = formularioAñadir.elements.fondoColores;
+    const icono = formularioAñadir.elements.icono;
+    fondoColores.forEach((color) => {
+      color.classList.remove("pinchado");
+    });
+    icono.forEach((icon) => {
+      icon.classList.remove("pinchado");
+    });
+  }
 });

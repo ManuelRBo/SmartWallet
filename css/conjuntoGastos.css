@@ -60,7 +60,6 @@
 
     & .linea {
       width: 80%;
-      max-width: 440px;
       height: 1px;
       margin: auto;
       background-color: #bcbcbc;
@@ -105,8 +104,8 @@
       }
 
       & .linea {
-        width: 81%;
-        max-width: 480px;
+        width: 86%;
+        max-width: 350px;
       }
     }
   }
@@ -114,7 +113,7 @@
 @media (min-width: 1400px) {
     .conjunto-transaccion {
       & .linea {
-        width: 74%;
+        width: 87%;
       }
     }
   }

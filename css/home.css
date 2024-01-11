@@ -7,6 +7,10 @@ body {
   min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
 .fondo {
   position: absolute;
   background-image: url(../img/fondoHome.svg);
@@ -472,7 +476,7 @@ footer {
 
     & .ultimasTransacciones {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));
     }
   }
 
@@ -535,6 +539,14 @@ footer {
       & button[type="submit"] {
         font-size: 2.5rem;
       }
+    }
+  }
+}
+
+@media (min-width: 1375px) {
+  footer {
+    & .ultimasTransacciones {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }

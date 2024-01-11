@@ -1,9 +1,3 @@
-<?php
-if (!isset($_SESSION['usuario'])) {
-  header('Location: /');
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -26,19 +20,19 @@ if (!isset($_SESSION['usuario'])) {
         <div class="avatar">
           <img src="img/avatar.svg" alt="Avatar" />
           <div class="nombre">
-            <p>Hola, <br /><?php echo $_SESSION['usuario']['nombre'] . " " . $_SESSION['usuario']['apellidos'] ?></p>
+            <p>Hola, <br />Manuel Rodrigo</p>
           </div>
         </div>
         <img class="campana" src="img/campana.svg" alt="Notificaciones" />
       </div>
-      <form action="cerrarSesion" method="post">
+      <form action="#" method="post" id="cerrarSesion">
         <input type="submit" name="cerrarSesion" value="Cerrar Sesion" />
       </form>
     </div>
   </header>
 
   <main>
-    <p class="gastoTotal"></p>
+    <p class="gastoTotal">-2000,50€</p>
 
     <div class="botones">
       <div class="boton" id="botonAñadir">
@@ -55,21 +49,21 @@ if (!isset($_SESSION['usuario'])) {
         <p>Eliminar</p>
       </a>
 
-      <a href="#" class="boton">
+      <a href="transacciones.html" class="boton">
         <div class="fondoIcono">
           <img src="img/iconosBotones/transacciones.svg" alt="Transacciones" />
         </div>
         <p>Transacciones</p>
       </a>
 
-      <a href="#" class="boton">
+      <a href="ahorros.html" class="boton">
         <div class="fondoIcono">
           <img src="img/iconosBotones/ahorro.svg" alt="Ahorros" />
         </div>
         <p>Ahorros</p>
       </a>
 
-      <a href="#" class="boton">
+      <a href="transacciones.html" class="boton">
         <div class="fondoIcono">
           <img src="img/iconosBotones/estadisticas.svg" alt="Estadisticas" />
         </div>
@@ -86,7 +80,7 @@ if (!isset($_SESSION['usuario'])) {
         <div class="gasto">
           <div class="icono-titulo">
             <div class="fondoProducto">
-              <img src="img/iconosProductos/spotify.svg" alt="Spotify">
+              <img src="img/iconosProductos/spotify.svg" alt="Spotify" width="45" height="45">
             </div>
             <div class="titulo-fecha">
               <p>Spotify</p>
@@ -100,6 +94,82 @@ if (!isset($_SESSION['usuario'])) {
         </div>
         <div class="linea"></div>
       </div>
+
+      <div class="conjunto-transaccion">
+        <div class="gasto">
+          <div class="icono-titulo">
+            <div class="fondoProducto" style="background-color: #fff;">
+              <img src="img/iconosProductos/amazon.svg" alt="Amazon" width="45" height="45">
+            </div>
+            <div class="titulo-fecha">
+              <p>Amazon</p>
+              <p>1 Noviembre</p>
+            </div>
+          </div>
+          <div class="dinero">
+            <p>-49,99€</p>
+            <p>Compra</p>
+          </div>
+        </div>
+        <div class="linea"></div>
+      </div>
+
+      <div class="conjunto-transaccion">
+        <div class="gasto">
+          <div class="icono-titulo">
+            <div class="fondoProducto" style="background-color: #fff;">
+              <img src="img/iconosProductos/apple.svg" alt="Apple" width="45" height="45">
+           </div>
+            <div class="titulo-fecha">
+              <p>Apple</p>
+              <p>25 Octubre</p>
+            </div>
+          </div>
+          <div class="dinero">
+            <p>-799€</p>
+            <p>Compra</p>
+          </div>
+        </div>
+        <div class="linea"></div>
+      </div>
+
+      <div class="conjunto-transaccion">
+        <div class="gasto">
+          <div class="icono-titulo">
+            <div class="fondoProducto" style="background-color: rgba(25, 195, 125, 0.32);">
+              <img src="img/iconosProductos/chatgpt.svg" alt="ChatGPT" width="45" height="45">
+            </div>
+            <div class="titulo-fecha">
+              <p>Chatgpt</p>
+              <p>1 Ocutbre</p>
+            </div>
+          </div>
+          <div class="dinero">
+            <p>-19,99€</p>
+            <p>Suscripcion</p>
+          </div>
+        </div>
+        <div class="linea"></div>
+      </div>
+
+      <div class="conjunto-transaccion">
+        <div class="gasto">
+          <div class="icono-titulo">
+            <div class="fondoProducto" style="background-color: rgba(79, 70, 229, 0.32);">
+              <img src="img/iconosProductos/comercio.svg" alt="Cesta" width="45" height="45">
+            </div>
+            <div class="titulo-fecha">
+              <p>Mercadona</p>
+              <p>29 Septiembre</p>
+            </div>
+          </div>
+          <div class="dinero">
+            <p>-80€</p>
+            <p>Compra</p>
+          </div>
+        </div>
+        <div class="linea"></div>
+      </div>
     </div>
 
   </footer>
@@ -109,7 +179,7 @@ if (!isset($_SESSION['usuario'])) {
       <img src="img/flechaAtras.svg" alt="Cerrar" />
     </div>
     <h1>Añadir</h1>
-    <form action="#" method="post" id="formularioAñadir">
+    <form action="" method="post" id="formularioAñadir">
       <div class="conjunto">
         <label for="tipo">Gasto o Ingreso</label>
         <select name="tipo" id="tipo">
