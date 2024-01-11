@@ -7,3 +7,13 @@ document.getElementById('iniciarSesion').addEventListener('click', function() {
     document.querySelector('.registro').style.display = 'none';
     document.querySelector('.login').style.display = 'block';
 });
+
+document.getElementById('login').addEventListener('submit', function(e) {
+    e.preventDefault();
+        window.location.href = 'home.html';
+});
+
+document.getElementById('registro').addEventListener('submit', function(e) {
+    e.preventDefault();
+        window.location.href = 'home.html';
+});

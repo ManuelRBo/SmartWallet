@@ -1,22 +1,3 @@
-// Actualizamos el total de gastos cada segundo
-const total = document.querySelector(".gastoTotal");
-function actualizarTotal() {
-  fetch("/obtenerTotal", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      total.innerHTML = data.total + " €";
-    })
-    .catch((err) => console.log(err));
-}
-actualizarTotal();
-setInterval(actualizarTotal, 1000);
 
 // Mostramos el formulario
 const botonAñadir = document.getElementById("botonAñadir");
@@ -72,36 +53,3 @@ botonCerrar.addEventListener("click", () => {
   document.getElementById("overlay").style.display = "none";
   formularioAñadir.reset();
 });
-
-// Mandamos una solicitud al servidor para que añada los gastos
-const mensaje = document.getElementById("mensaje");
-formularioAñadir.addEventListener("submit", (e) => {
-  e.preventDefault();
-  fetch('/añadirGasto', {
-    method: 'POST',
-    body: new FormData(formularioAñadir)
-    })
-    .then(res => {
-      return res.json();
-    })
-    .then(data => {
-      if (data.error) {
-        mensaje.innerHTML = data.error;
-        mensaje.classList.add("errores");
-      } else {
-        mensaje.innerHTML = data.exito;
-        mensaje.classList.add("exito");
-        actualizarTotal();
-        setTimeout(() => {
-          mensaje.innerHTML = "";
-          mensaje.classList.remove("exito");
-        }, 2000);
-        formularioAñadir.reset();
-        document.querySelectorAll(".pinchado").forEach((pinchado) => {
-          pinchado.classList.remove("pinchado");
-        });
-        document.querySelector(".resultadoIcono").innerHTML = "";
-        document.querySelector(".resultadoIcono").style.backgroundColor = "";
-      }
-    })
-  });

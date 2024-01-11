@@ -8,6 +8,8 @@ body {
   display: grid;
   place-content: center;
   gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 h1 {
