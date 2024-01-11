@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Kameron:wght@700&display=swap");
+
+body {
+  background-color: #00a7f8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.fondo {
+  position: absolute;
+  background-image: url(../img/fondoHome.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 85px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header {
+  width: 90%;
+  max-width: 1800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+
+  & .logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.derecha {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+
+  & form {
+    appearance: none;
+    width: 100%;
+
+    & input {
+      appearance: none;
+      background-color: #d9d9d9;
+      width: 100%;
+      height: 20px;
+      border-radius: 20px;
+      border: none;
+      padding: 0 20px;
+      font-size: 1.2rem;
+      color: #005984;
+      font-weight: 400;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  & .avatar-campana {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & .avatar {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      & img {
+        background-color: #d9d9d9;
+        border-radius: 50%;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+      }
+
+      & .nombre {
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 400;
+      }
+    }
+
+    & .campana {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+main {
+  width: 90%;
+  max-width: 1800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+
+  & .gastoTotal {
+    font-family: "Kameron", serif;
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  & .botones {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    & .boton {
+      width: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      & .fondoIcono {
+        background-color: rgba(223, 237, 241, 0.54);
+        border-radius: 15px;
+        width: 70px;
+        height: 70px;
+        display: grid;
+        place-items: center;
+      }
+
+      & img {
+        width: 40px;
+      }
+    }
+
+    & p {
+      font-size: 1.2rem;
+      color: white;
+      font-weight: 400;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: white;
+  border-radius: 35px 35px 0 0;
+  padding: 20px;
+  flex-grow: 1;
+
+  & h2 {
+    font-size: 2.5rem;
+    color: #005984;
+    margin-bottom: 15px;
+  }
+
+  & .ultimasTransacciones {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.opcionAñadir {
+  width: 85%;
+  max-width: 700px;
+  height: 80vh;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  overflow: auto;
+  z-index: 2;
+
+  & .cerrar{
+    position: absolute;
+    top: 30px;
+
+    & img{
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+
+  & h1 {
+    text-align: center;
+    color: #005984;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+
+    & .conjunto {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      & label {
+        font-size: 1.2rem;
+        color: #005984;
+        font-weight: 400;
+      }
+
+      & select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url(../img/flechaSelect.svg);
+        background-position: 90%;
+        background-repeat: no-repeat;
+        background-size: 4%;
+        border: none;
+        background-color: #d9d9d9;
+        font-size: 1.4rem;
+        color: black;
+        outline: none;
+        border-radius: 20px;
+        padding: 10px;
+      }
+
+      & input {
+        appearance: none;
+        background-color: #d9d9d9;
+        width: 100%;
+        height: 15px;
+        border-radius: 20px;
+        border: none;
+        padding: 15px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        outline: none;
+        cursor: pointer;
+      }
+
+      & textarea {
+        background-color: #d9d9d9;
+        resize: none;
+        max-width: 100%;
+        max-height: 70px;
+        border-radius: 20px;
+        border: none;
+        padding: 5px 15px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        outline: none;
+        cursor: pointer;
+      }
+
+      & .fondosColores {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        & button {
+          width: 25px;
+          height: 25px;
+          border-radius: 10px;
+          cursor: pointer;
+          background-color: black;
+          border: 1px solid rgb(126, 126, 126);
+          box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      & .iconos {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        & button {
+          cursor: pointer;
+          border: none;
+          outline: none;
+          background: #dddddd;
+          border-radius: 10px;
+          padding: 5px;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          & img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      & .resultadoIcono {
+        width: 60px;
+        height: 60px;
+        gap: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25) inset;
+        display: grid;
+        place-items: center;
+
+        & img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    & button[type="submit"] {
+      appearance: none;
+      background-color: #005984;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px;
+      font-size: 1.4rem;
+      font-weight: 400;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #004d6b;
+      }
+    }
+  }
+}
+
+.opcionAñadir::-webkit-scrollbar {
+  width: 0px;
+}
+
+.pinchado{
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 5px 1px #004d6b !important;
+}
+
+.errores{
+  width: 100%;
+  margin: auto;
+  background-color: red;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 5px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.exito{
+  width: 100%;
+  margin: auto;
+  background-color: green;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 5px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  body {
+    gap: 30px;
+  }
+
+  header .logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .derecha {
+    gap: 26px;
+
+    & .avatar-campana {
+      & .avatar {
+        gap: 10px;
+        & img {
+          padding: 7px;
+          width: 50px;
+          height: 50px;
+        }
+
+        & .nombre {
+          font-size: 2.4rem;
+        }
+      }
+
+      & .campana {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+
+  main {
+    gap: 40px;
+
+    & .gastoTotal {
+      font-size: 6rem;
+    }
+
+    & .botones {
+      justify-content: space-between;
+
+      & .boton {
+        width: 50px;
+        gap: 10px;
+
+        & .fondoIcono {
+          width: 80px;
+          height: 80px;
+        }
+
+        & img {
+          width: 50px;
+        }
+      }
+
+      & p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  footer {
+    border-radius: 80px 80px 0 0;
+    padding: 50px;
+    flex-grow: 1;
+
+    & h2 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    & .ultimasTransacciones {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  .opcionAñadir {
+    gap: 15px;
+
+    & .cerrar{
+      position: absolute;
+      top: 35px;
+  
+      & img{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
+
+    & h1 {
+      font-size: 4.5rem;
+    }
+
+    & form {
+      & .conjunto {
+        & label {
+          font-size: 2.2rem;
+        }
+
+        & select {
+          font-size: 2rem;
+        }
+
+        & input {
+          padding: 20px;
+          font-size: 2rem;
+        }
+
+        & textarea {
+          max-height: 90px;
+          padding: 10px 15px;
+          font-size: 2rem;
+        }
+
+        & .fondosColores {
+          & button {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        & .iconos {
+          & button {
+            & img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+
+      & button[type="submit"] {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

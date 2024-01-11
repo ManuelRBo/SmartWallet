@@ -1,0 +1,222 @@
+<?php
+if (!isset($_SESSION['usuario'])) {
+  header('Location: /');
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/globales.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/conjuntoGastos.css" />
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="fondo"></div>
+
+  <header>
+    <img class="logo" src="img/logo.svg" alt="Logo SmartWallet" />
+    <div class="derecha">
+      <div class="avatar-campana">
+        <div class="avatar">
+          <img src="img/avatar.svg" alt="Avatar" />
+          <div class="nombre">
+            <p>Hola, <br /><?php echo $_SESSION['usuario']['nombre'] . " " . $_SESSION['usuario']['apellidos'] ?></p>
+          </div>
+        </div>
+        <img class="campana" src="img/campana.svg" alt="Notificaciones" />
+      </div>
+      <form action="cerrarSesion" method="post">
+        <input type="submit" name="cerrarSesion" value="Cerrar Sesion" />
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <p class="gastoTotal"></p>
+
+    <div class="botones">
+      <div class="boton" id="botonAñadir">
+        <div class="fondoIcono">
+          <img src="img/iconosBotones/añadir.svg" alt="Añadir" />
+        </div>
+        <p>Añadir</p>
+      </div>
+
+      <a href="#" class="boton">
+        <div class="fondoIcono">
+          <img src="img/iconosBotones/eliminar.svg" alt="Eliminar" />
+        </div>
+        <p>Eliminar</p>
+      </a>
+
+      <a href="#" class="boton">
+        <div class="fondoIcono">
+          <img src="img/iconosBotones/transacciones.svg" alt="Transacciones" />
+        </div>
+        <p>Transacciones</p>
+      </a>
+
+      <a href="#" class="boton">
+        <div class="fondoIcono">
+          <img src="img/iconosBotones/ahorro.svg" alt="Ahorros" />
+        </div>
+        <p>Ahorros</p>
+      </a>
+
+      <a href="#" class="boton">
+        <div class="fondoIcono">
+          <img src="img/iconosBotones/estadisticas.svg" alt="Estadisticas" />
+        </div>
+        <p>Estadisticas</p>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <h2>Últimas Transacciones</h2>
+
+    <div class="ultimasTransacciones">
+      <div class="conjunto-transaccion">
+        <div class="gasto">
+          <div class="icono-titulo">
+            <div class="fondoProducto">
+              <img src="img/iconosProductos/spotify.svg" alt="Spotify">
+            </div>
+            <div class="titulo-fecha">
+              <p>Spotify</p>
+              <p>10 Noviembre</p>
+            </div>
+          </div>
+          <div class="dinero">
+            <p>-9,99€</p>
+            <p>Suscripcion</p>
+          </div>
+        </div>
+        <div class="linea"></div>
+      </div>
+    </div>
+
+  </footer>
+
+  <div class="opcionAñadir">
+    <div class="cerrar">
+      <img src="img/flechaAtras.svg" alt="Cerrar" />
+    </div>
+    <h1>Añadir</h1>
+    <form action="#" method="post" id="formularioAñadir">
+      <div class="conjunto">
+        <label for="tipo">Gasto o Ingreso</label>
+        <select name="tipo" id="tipo">
+          <option value="gasto">Gasto</option>
+          <option value="ingreso">Ingreso</option>
+        </select>
+      </div>
+
+      <div class="conjunto">
+        <label for="titulo">Titulo</label>
+        <input type="text" name="titulo" id="titulo" />
+      </div>
+
+      <div class="conjunto">
+        <label for="fecha">Fecha</label>
+        <input type="date" name="fecha" id="fecha" />
+      </div>
+
+      <div class="conjunto">
+        <label for="importe">Importe</label>
+        <input type="number" name="importe" id="importe" />
+      </div>
+
+      <div class="conjunto">
+        <label for="categoria">Categoria</label>
+        <select name="categoria" id="categoria">
+          <option value="" selected disabled>Elige la categoria</option>
+          <option value="comercio">Comercio</option>
+          <option value="transporte">Transporte</option>
+          <option value="transferencias">Transferencias</option>
+          <option value="ocio">Ocio</option>
+        </select>
+      </div>
+
+      <div class="conjunto">
+        <label for="descripcion">Descripcion</label>
+        <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+      </div>
+
+      <div class="conjunto" id="ahorrar" style="display: none;">
+        <label for="ahorro">¿Quieres que una cantidad pase a un ahorro?</label>
+        <input type="number" name="cantidadAhorro" id="cantidadAhorro" placeholder="Importe a ahorrar">
+        <select name="ahorro" id="ahorro">
+          <option value="" selected disabled>Ahorro al que mover el importe</option>
+        </select>
+      </div>
+
+      <div class="conjunto">
+        <label for="fondoColores">Fondo del icono</label>
+        <input type="hidden" name="fondoColoresInput" id="fondoColoresInput">
+        <div class="fondosColores">
+          <button type="button" name="fondoColores" value="rgba(30, 215, 96, 0.32)" style="background-color: rgba(30, 215, 96, 0.32);"></button>
+          <button type="button" name="fondoColores" value="rgba(255, 255, 255, 1)" style="background-color: rgba(255, 255, 255, 1);"></button>
+          <button type="button" name="fondoColores" value="rgba(39, 144, 195, 0.32)" style="background-color: rgba(39, 144, 195, 0.32) ;"></button>
+          <button type="button" name="fondoColores" value="rgba(0, 0, 0, 1)" style="background-color: rgba(0, 0, 0, 1);"></button>
+          <button type="button" name="fondoColores" value="rgba(79, 70, 229, 0.32)" style="background-color: rgba(79, 70, 229, 0.32);"></button>
+          <button type="button" name="fondoColores" value="rgba(25, 195, 125, 0.32)" style="background-color: rgba(25, 195, 125, 0.32) ;"></button>
+          <button type="button" name="fondoColores" value="rgba(177, 6, 15, 0.32)" style="background-color: rgba(177, 6, 15, 0.32) ;"></button>
+        </div>
+      </div>
+
+      <div class="conjunto">
+        <label for="icono">Icono</label>
+        <input type="hidden" name="iconoInput" id="iconoInput">
+        <div class="iconos">
+          <button type="button" name="icono" value="spotify">
+            <img src="img/iconosProductos/spotify.svg" alt="icono spotify" />
+          </button>
+
+          <button type="button" name="icono" value="amazon">
+            <img src="img/iconosProductos/amazon.svg" alt="icono amazon" />
+          </button>
+
+          <button type="button" name="icono" value="apple">
+            <img src="img/iconosProductos/apple.svg" alt="icono apple" />
+          </button>
+
+          <button type="button" name="icono" value="chatgpt">
+            <img src="img/iconosProductos/Chatgpt.svg" alt="icono chatgpt" />
+          </button>
+
+          <button type="button" name="icono" value="comercio">
+            <img src="img/iconosProductos/comercio.svg" alt="icono comercio" />
+          </button>
+
+          <button type="button" name="icono" value="netflix">
+            <img src="img/iconosProductos/Netflix.svg" alt="icono netflix" />
+          </button>
+
+          <button type="button" name="icono" value="paypal">
+            <img src="img/iconosProductos/Paypal.svg" alt="icono paypal" />
+          </button>
+        </div>
+      </div>
+
+      <div class="conjunto">
+        <label for="resultadoIcono">Resultado icono</label>
+        <div class="resultadoIcono"></div>
+      </div>
+      <p id="mensaje"></p>
+      <button type="submit">Añadir</button>
+    </form>
+  </div>
+
+  <div id="overlay"></div>
+
+  <script type="module" src="js/home.js"></script>
+</body>
+
+</html>

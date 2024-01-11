@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Kameron:wght@700&display=swap");
+
+  .conjunto-transaccion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & .gasto {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      & .icono-titulo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        & .fondoProducto {
+          width: 45px;
+          height: 45px;
+          display: grid;
+          place-items: center;
+          background-color: rgba(30, 215, 96, 0.32);
+          border-radius: 12px;
+          box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+          & img {
+            width: 35px;
+          }
+        }
+
+        & :first-child {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #000;
+        }
+
+        & :nth-child(2) {
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: #acacac;
+        }
+      }
+
+      & .dinero {
+        & :first-child {
+          font-family: "Kameron", serif;
+          font-size: 2rem;
+          font-weight: 700;
+          color: #000;
+        }
+
+        & :nth-child(2) {
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: #acacac;
+        }
+      }
+    }
+
+    & .linea {
+      width: 80%;
+      max-width: 440px;
+      height: 1px;
+      margin: auto;
+      background-color: #bcbcbc;
+    }
+  }
+
+
+@media (min-width: 768px) {
+
+    .conjunto-transaccion {
+      & .gasto {
+        & .icono-titulo {
+          gap: 20px;
+
+          & .fondoProducto {
+            width: 60px;
+            height: 60px;
+
+            & img {
+              width: 45px;
+            }
+          }
+
+          & :first-child {
+            font-size: 2.5rem;
+          }
+
+          & :nth-child(2) {
+            font-size: 1.5rem;
+          }
+        }
+
+        & .dinero {
+          & :first-child {
+            font-size: 2.5rem;
+          }
+
+          & :nth-child(2) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      & .linea {
+        width: 81%;
+        max-width: 480px;
+      }
+    }
+  }
+
+@media (min-width: 1400px) {
+    .conjunto-transaccion {
+      & .linea {
+        width: 74%;
+      }
+    }
+  }
