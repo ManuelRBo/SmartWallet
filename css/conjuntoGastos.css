@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kameron:wght@700&display=swap");
 
   .conjunto-transaccion {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 
     & .gasto {
       display: flex;
@@ -60,7 +61,7 @@
     }
 
     & .linea {
-      width: 80%;
+      width: 100%;
       height: 1px;
       margin: auto;
       background-color: #bcbcbc;
@@ -107,8 +108,7 @@
       }
 
       & .linea {
-        width: 86%;
-        max-width: 350px;
+        width: 100%;
       }
     }
   }
@@ -116,7 +116,7 @@
 @media (min-width: 1400px) {
     .conjunto-transaccion {
       & .linea {
-        width: 87%;
+        width: 100%;
       }
     }
   }

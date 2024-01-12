@@ -16,7 +16,7 @@ body {
 }
 
 .contenedor {
-  width: 90%;
+  width: 85%;
   max-width: 1000px;
   margin: auto;
   display: flex;
@@ -39,12 +39,11 @@ body {
       width: 100%;
       margin: auto;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 10px;
 
       & input {
-        width: 75%;
+        width: 80%;
         height: 40px;
         border: none;
         background-color: #e8e8e8;
@@ -57,6 +56,7 @@ body {
         height: 40px;
         border: none;
         background-color: transparent;
+        cursor: pointer;
 
         & img {
           width: 100%;
@@ -69,7 +69,6 @@ body {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 20px;
 
       & select {
@@ -97,8 +96,10 @@ body {
   }
 
   & main {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
 
@@ -123,7 +124,7 @@ body {
     }
 
     & form {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       & .barra-busqueda {
         width: 100%;
         gap: 40px;
@@ -153,12 +154,18 @@ body {
         }
       }
     }
+  }
+}
 
+@media (min-width: 820px) {
+  .contenedor {
     & main {
       width: 100%;
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
-      justify-content: space-between;
-      gap: 20px;
+      column-gap: 100px;
     }
   }
 }
+
+
