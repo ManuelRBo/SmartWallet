@@ -3,9 +3,13 @@ body {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
-  }
-  
-  .flecha-atras {
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+.flecha-atras {
     width: 50px;
     height: 50px;
     background-image: url(../img/flechaAtras.svg);
@@ -15,17 +19,17 @@ body {
     position: absolute;
     top: 32px;
     left: 5px;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     color: #005984;
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 40px;
-  }
+}
 
-main{
+main {
     background-color: rgba(223, 237, 241, 0.85);
     position: relative;
     padding-top: 50px;
@@ -33,7 +37,7 @@ main{
     flex-grow: 1;
     padding-bottom: 30px;
 
-    & .contenedor{
+    & .contenedor {
         width: 90%;
         height: 100%;
         margin: 0 auto;
@@ -41,7 +45,7 @@ main{
         flex-direction: column;
         flex-grow: 1;
 
-        & .ingresos-gastos{
+        & .ingresos-gastos {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,7 +55,7 @@ main{
             transform: translateX(-50%);
             cursor: pointer;
 
-            & .ingresos{
+            & .ingresos {
                 width: 120px;
                 background-color: white;
                 text-align: center;
@@ -61,7 +65,7 @@ main{
                 border-radius: 10px 0px 0px 10px;
             }
 
-            & .gastos{
+            & .gastos {
                 width: 120px;
                 text-align: center;
                 background-color: #005984;
@@ -73,7 +77,7 @@ main{
             }
         }
 
-        & .grafico-resumen{
+        & .grafico-resumen {
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -82,7 +86,7 @@ main{
             gap: 30px;
             flex-grow: 1;
 
-            & .grafico{
+            & .grafico {
                 width: 100%;
                 background-color: white;
                 border-radius: 10px;
@@ -90,14 +94,14 @@ main{
                 flex-grow: 1;
             }
 
-            & .resumen{
+            & .resumen {
                 width: 100%;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 place-items: center;
                 gap: 30px;
 
-                & .tarjeta{
+                & .tarjeta {
                     width: 90%;
                     max-width: 160px;
                     min-height: 220px;
@@ -108,18 +112,18 @@ main{
                     flex-direction: column;
                     justify-content: space-between;
 
-                    & .titulo-euros{
+                    & .titulo-euros {
                         display: flex;
                         flex-direction: column;
                         gap: 2px;
                         font-weight: 700;
 
-                        & h3{
+                        & h3 {
                             font-size: 1.5rem;
                             font-weight: 400;
                         }
 
-                        & p{
+                        & p {
                             font-size: 2rem;
                             font-weight: 700;
                         }
@@ -130,46 +134,46 @@ main{
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .flecha-atras {
         width: 50px;
         height: 60px;
         background-size: 60%;
         top: 40px;
         left: 40px;
-      }
-      
-      h1 {
+    }
+
+    h1 {
         font-size: 6rem;
         margin-bottom: 60px;
-      }
-    
-    main{
+    }
+
+    main {
         background-color: rgba(223, 237, 241, 0.85);
         position: relative;
         padding-top: 50px;
         border-radius: 40px 40px 0px 0px;
         flex-grow: 1;
         padding-bottom: 30px;
-    
-        & .contenedor{
-            & .ingresos-gastos{
+
+        & .contenedor {
+            & .ingresos-gastos {
                 top: -35px;
-    
-                & .ingresos{
+
+                & .ingresos {
                     width: 150px;
                     font-size: 3rem;
                     padding: 15px 20px;
                 }
-    
-                & .gastos{
+
+                & .gastos {
                     width: 150px;
                     font-size: 3rem;
                     padding: 15px 20px;
                 }
             }
-    
-            & .grafico-resumen{
+
+            & .grafico-resumen {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -177,21 +181,21 @@ main{
                 align-items: center;
                 gap: 50px;
                 flex-grow: 1;
-    
-                & .resumen{
-                    & .tarjeta{
-                        & .titulo-euros{
+
+                & .resumen {
+                    & .tarjeta {
+                        & .titulo-euros {
                             display: flex;
                             flex-direction: column;
                             gap: 2px;
                             font-weight: 700;
-    
-                            & h3{
+
+                            & h3 {
                                 font-size: 2rem;
                                 font-weight: 400;
                             }
-    
-                            & p{
+
+                            & p {
                                 font-size: 2.5rem;
                                 font-weight: 700;
                             }
@@ -203,16 +207,15 @@ main{
     }
 }
 
-@media (min-width: 1024px){
-    main{   
-        & .contenedor{
-
-            & .grafico-resumen{
+@media (min-width: 1024px) {
+    main {
+        & .contenedor {
+            & .grafico-resumen {
                 flex-direction: row;
                 justify-content: space-between;
                 gap: 0;
 
-                & .grafico{
+                & .grafico {
                     width: 100%;
                     height: 100%;
                     background-color: white;
@@ -220,24 +223,24 @@ main{
                     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                     flex-grow: 1;
                 }
-    
-                & .resumen{
+
+                & .resumen {
                     width: 80%;
                     gap: 0;
                     row-gap: 30px;
-                    & .tarjeta{
-                        & .titulo-euros{
+                    & .tarjeta {
+                        & .titulo-euros {
                             display: flex;
                             flex-direction: column;
                             gap: 2px;
                             font-weight: 700;
-    
-                            & h3{
+
+                            & h3 {
                                 font-size: 2rem;
                                 font-weight: 400;
                             }
-    
-                            & p{
+
+                            & p {
                                 font-size: 2.5rem;
                                 font-weight: 700;
                             }
