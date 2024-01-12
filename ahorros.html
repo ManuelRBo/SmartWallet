@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/SmartWallet/public/css/ahorros.css">
-    <link rel="stylesheet" href="/SmartWallet/public/css/globales.css">
+    <link rel="stylesheet" href="css/ahorros.css">
+    <link rel="stylesheet" href="css/globales.css">
     <title>Ahorros</title>
 </head>
 <body>
-    <a href="#" class="flecha-atras"></a>
+    <a href="home.html" class="flecha-atras"></a>
     <h1>Ahorros</h1>
 
     <main class="contenedor">
         <div class="formulario">
             <h2>Crear Ahorro</h2>
-            <form action="">
+            <form action="#" id="formularioAhorros">
                 <div class="conjunto-campo">
                     <div class="campoAhorro">
                         <label for="nombre">Nombre del ahorro</label>
@@ -26,40 +26,40 @@
                     <div class="campoCategoria">
                         <div class="botones">
                             <button class="categorias" type="button" name="categoria" value="viaje">
-                                <img src="/SmartWallet/public/img/iconosCategoriasAhorro/viajes.svg" alt="Icono viaje" width="50px">
+                                <img src="img/iconosCategoriasAhorro/viajes.svg" alt="Icono viaje" width="50px">
                                 <p>Viaje</p>
                             </button>
                             <button class="categorias" type="button" name="categoria" value="vehiculo">
-                                <img src="/SmartWallet/public/img/iconosCategoriasAhorro/vehiculo.svg" alt="Icono vehiculo" width="50px">
+                                <img src="img/iconosCategoriasAhorro/vehiculo.svg" alt="Icono vehiculo" width="50px">
                                 <p>Vehiculo</p>
                             </button>
                             <button class="categorias" type="button" name="categoria" value="estudios">
-                                <img src="/SmartWallet/public/img/iconosCategoriasAhorro/estudios.svg" alt="Icono estudios" width="50px">
+                                <img src="img/iconosCategoriasAhorro/estudios.svg" alt="Icono estudios" width="50px">
                                 <p>Estudios</p>
                             </button>
                             <button class="categorias" type="button" name="categoria" value="vivienda">
-                                <img src="/SmartWallet/public/img/iconosCategoriasAhorro/vivienda.svg" alt="Icono vivienda" width="50px">
+                                <img src="img/iconosCategoriasAhorro/vivienda.svg" alt="Icono vivienda" width="50px">
                                 <p>Vivienda</p>
                             </button>
                             
                             <button class="categorias" type="button" name="categoria" value="ahorro">
-                                <img src="/SmartWallet/public/img/iconosCategoriasAhorro/ahorro.svg" alt="Icono ahorro" width="50px">
+                                <img src="img/iconosCategoriasAhorro/ahorro.svg" alt="Icono ahorro" width="50px">
                                 <p>Ahorro</p>
                             </button>
                             <button class="categorias" type="button" name="categoria" value="ocio">
-                                <img src="/SmartWallet/public/img/iconosCategoriasAhorro/ocio.svg" alt="Icono ocio" width="50px">
+                                <img src="img/iconosCategoriasAhorro/ocio.svg" alt="Icono ocio" width="50px">
                                 <p>Ocio</p>
                             </button>
                             <button class="categorias" type="button" name="categoria" value="ropa">
-                                <img src="/SmartWallet/public/img/iconosCategoriasAhorro/ropa.svg" alt="Icono ropa" width="50px">
+                                <img src="img/iconosCategoriasAhorro/ropa.svg" alt="Icono ropa" width="50px">
                                 <p>Ropa</p>
                             </button>
                             <button class="categorias" type="button" name="categoria" value="tecnologia">
-                                <img src="/SmartWallet/public/img/iconosCategoriasAhorro/tecnologia.svg" alt="Icono tecnologia" width="50px">
+                                <img src="img/iconosCategoriasAhorro/tecnologia.svg" alt="Icono tecnologia" width="50px">
                                 <p>Tecnologia</p>
                             </button>
                             <button class="categorias" type="button" name="categoria" value="otros">
-                                <img src="/SmartWallet/public/img/iconosCategoriasAhorro/otros.svg" alt="Icono otros" width="50px">
+                                <img src="img/iconosCategoriasAhorro/otros.svg" alt="Icono otros" width="50px">
                                 <p>Otros</p>
                             </button>
                         </div>
@@ -80,6 +80,7 @@
                     </div>
                 </div>
 
+                <p id="mensaje"></p>
                 <input type="submit" value="Crear Ahorro">
             </form>
         </div>
@@ -90,7 +91,7 @@
             <div class="contenedorMisAhorros">
                 <div class="contenedorAhorro">
                     <div class="izquierda">
-                        <img src="/SmartWallet/public/img/iconosCategoriasAhorro/viajes.svg" alt="Icono Viajes" width="50px">
+                        <img src="img/iconosCategoriasAhorro/viajes.svg" alt="Icono Viajes" width="50px">
                         <div class="tituloFecha">
                             <h3>Maldivas</h3>
                             <p>21-07-2027</p>
@@ -102,7 +103,7 @@
                 </div>
                 <div class="contenedorAhorro">
                     <div class="izquierda">
-                        <img src="/SmartWallet/public/img/iconosCategoriasAhorro/viajes.svg" alt="Icono Viajes" width="50px">
+                        <img src="img/iconosCategoriasAhorro/viajes.svg" alt="Icono Viajes" width="50px">
                         <div class="tituloFecha">
                             <h3>Maldivas</h3>
                             <p>21-07-2027</p>
@@ -116,5 +117,7 @@
 
         </div>
     </main>
+
+    <script type="module" src="js/ahorros.js"></script>
 </body>
 </html>
