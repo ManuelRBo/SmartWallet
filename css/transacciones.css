@@ -3,6 +3,10 @@ body {
   padding-top: 30px;
 }
 
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
 .flecha-atras {
   width: 50px;
   height: 50px;
