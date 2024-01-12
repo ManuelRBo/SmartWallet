@@ -51,6 +51,7 @@ botonCerrar.addEventListener("click", () => {
   document.querySelector(".opcionAñadir").style.display = "none";
   document.getElementById("overlay").style.display = "none";
   document.body.style.overflow = "auto";
+  mensaje.style.display = "none";
   formularioAñadir.reset();
 });
 
@@ -59,10 +60,10 @@ document.getElementById("cerrarSesion").addEventListener("click", (e) => {
   window.location.href = "index.html";
 });
 
+const mensaje = document.querySelector("#mensaje");
 formularioAñadir.addEventListener("submit", (e) => {
   e.preventDefault();
   let vacio = false;
-  const mensaje = document.querySelector("#mensaje");
   const array = [
     formularioAñadir.elements.tipo.value,
     formularioAñadir.elements.titulo.value,
@@ -74,7 +75,6 @@ formularioAñadir.addEventListener("submit", (e) => {
   ];
 
   array.forEach((element) => {
-    console.log(element);
     if (element == "") {
       vacio = true;
     } else {

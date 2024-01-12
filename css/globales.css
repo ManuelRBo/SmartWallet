@@ -11,3 +11,29 @@
 a{
     text-decoration: none;
 }
+
+.errores{
+    width: 100%;
+    margin: auto;
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 5px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  
+  .exito{
+    width: 100%;
+    margin: auto;
+    background-color: green;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 5px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+  }
