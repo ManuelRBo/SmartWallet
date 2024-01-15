@@ -518,7 +518,7 @@ footer {
   }
 }
 
-@media (min-width: 1375px) {
+@media (min-width: 1200px) {
   footer {
     & .ultimasTransacciones {
       grid-template-columns: 1fr 1fr 1fr;
