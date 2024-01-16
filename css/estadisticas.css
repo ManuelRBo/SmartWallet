@@ -86,13 +86,6 @@ main {
             gap: 30px;
             flex-grow: 1;
 
-            & .grafico {
-                width: 100%;
-                background-color: white;
-                border-radius: 10px;
-                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-                flex-grow: 1;
-            }
 
             & .resumen {
                 width: 100%;
@@ -211,19 +204,6 @@ main {
     main {
         & .contenedor {
             & .grafico-resumen {
-                flex-direction: row;
-                justify-content: space-between;
-                gap: 0;
-
-                & .grafico {
-                    width: 100%;
-                    height: 100%;
-                    background-color: white;
-                    border-radius: 10px;
-                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-                    flex-grow: 1;
-                }
-
                 & .resumen {
                     width: 80%;
                     gap: 0;
@@ -245,6 +225,32 @@ main {
                                 font-weight: 700;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1100px) {
+    main {
+        & .contenedor {
+            & .grafico-resumen {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1150px) {
+    main {
+        & .contenedor {
+            & .grafico-resumen {
+                & .grafico{
+                    & img{
+                        width: 850px;
                     }
                 }
             }
