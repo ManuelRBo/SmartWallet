@@ -34,7 +34,7 @@
   <main>
     <p class="gastoTotal" aria-label="Gasto total: 2000,50 euros negativos">-2000,50€</p>
 
-    <div class="botones">
+    <nav class="botones">
       <div class="boton" id="botonAñadir">
         <div class="fondoIcono">
           <img src="img/iconosBotones/añadir.svg" alt="Añadir" />
@@ -69,13 +69,13 @@
         </div>
         <p>Estadisticas</p>
       </a>
-    </div>
+    </nav>
   </main>
 
   <footer>
     <h2>Últimas Transacciones</h2>
 
-    <div class="ultimasTransacciones" aria-label="Lista de últimas transacciones">
+    <section class="ultimasTransacciones" aria-label="Lista de últimas transacciones">
       <div class="conjunto-transaccion">
         <div class="gasto">
           <div class="icono-titulo">
@@ -170,10 +170,10 @@
         </div>
         <div class="linea"></div>
       </div>
-    </div>
+    </section>
 
   </footer>
-  <div class="opcionAñadir" aria-label="Opción para añadir transacción">
+  <section class="opcionAñadir" aria-hidden="true" aria-label="Opción para añadir transacción">
     <div class="cerrar">
       <img src="img/flechaAtras.svg" alt="Cerrar" />
     </div>
@@ -281,7 +281,7 @@
       <p id="mensaje"></p>
       <button type="submit">Añadir</button>
     </form>
-  </div>
+  </section>
 
   <div id="overlay" aria-hidden="true"></div>
 
