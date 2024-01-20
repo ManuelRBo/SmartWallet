@@ -1,62 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/autenticar.css" />
     <link rel="stylesheet" href="css/globales.css" />
     <title>Iniciar Sesión</title>
-  </head>
+</head>
 
-  <body>
-    <h1>Bienvenido a SmartWallet</h1>
+<body>
+    <h1 role="heading">Bienvenido a SmartWallet</h1>
+
     <div class="login contenedor">
-      <h2>Iniciar Sesión</h2>
-      <form method="post" id="login">
-        <input type="text" name="usuario" placeholder="Usuario" required />
-        <input
-          type="password"
-          name="contraseña"
-          placeholder="Contraseña"
-          required
-        />
-        <input type="submit" name="enviar" value="Iniciar Sesion" />
-      </form>
-      <p class="cambiar">
-        Si no tienes cuenta <span id="registrarse">Regístrate</span>
-      </p>
+        <h2>Iniciar Sesión</h2>
+        <form method="post" id="login">
+            <input type="text" name="usuario" id="usuario" placeholder="Usuario" required />
+            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required />
+            <input type="submit" name="enviar" value="Iniciar Sesión" />
+        </form>
+        <p class="cambiar">
+            Si no tienes cuenta <span id="registrarse">Regístrate</span>
+        </p>
     </div>
+
     <div class="registro contenedor">
-      <h2>Registrarse</h2>
-      <form method="post" id="registro">
-        <input type="text" name="nombre" placeholder="Nombre" required />
-        <input type="text" name="apellidos" placeholder="Apellidos" required />
-        <input
-          type="email"
-          name="email"
-          placeholder="Correo Electrónico"
-          required
-        />
-        <input type="text" name="usuario" placeholder="Usuario" required />
-        <input
-          type="password"
-          name="contraseña"
-          placeholder="Contraseña"
-          required
-        />
-        <input
-          type="password"
-          name="repetir"
-          placeholder="Repetir Contraseña"
-          required
-        />
-        <input type="submit" name="enviar" value="Registrarse" />
-      </form>
-      <p class="cambiar">
-        Si tienes cuenta <span id="iniciarSesion">Inicia Sesión</span>
-      </p>
+        <h2>Registrarse</h2>
+        <form method="post" id="registro">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required />
+            <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required />
+            <input type="email" name="email" id="email" placeholder="Correo Electrónico" required />
+            <input type="text" name="usuario" id="usuario_registro" placeholder="Usuario" required />
+            <input type="password" name="contraseña" id="contraseña_registro" placeholder="Contraseña" required />
+            <input type="password" name="repetir" id="repetir_contraseña" placeholder="Repetir Contraseña" required />
+            <input type="submit" name="enviar" value="Registrarse" />
+        </form>
+        <p class="cambiar">
+            Si tienes cuenta <span id="iniciarSesion">Inicia Sesión</span>
+        </p>
     </div>
 
     <script type="module" src="js/autenticar.js"></script>
-  </body>
+</body>
+
 </html>
