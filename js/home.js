@@ -101,22 +101,3 @@ formularioAñadir.addEventListener("submit", (e) => {
     });
   }
 });
-
-
-const avatar = document.getElementById('avatar');
-const avatares = document.querySelector('.avatares');
-avatar.addEventListener('click', () =>{
-  if(avatares.style.display === 'grid'){
-    avatares.style.display = 'none'
-  }else{
-    avatares.style.display = 'grid'
-  }
-})
-
-const avataresImg = avatares.querySelectorAll('img')
-
-avataresImg.forEach((element) =>{
-  element.addEventListener('click', () =>{
-    avatar.src = `img/avatares/${element.alt}.svg`;
-  })
-})
