@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="fondo"></div>
+  <div class="fondo" aria-hidden="true"></div>
 
   <header>
     <img class="logo" src="img/logo.svg" alt="Logo SmartWallet" />
@@ -45,7 +45,7 @@
   </header>
 
   <main>
-    <p class="gastoTotal">-2000,50€</p>
+    <p class="gastoTotal" aria-label="Gasto total: 2000,50 euros negativos">-2000,50€</p>
 
     <div class="botones">
       <div class="boton" id="botonAñadir">
@@ -88,7 +88,7 @@
   <footer>
     <h2>Últimas Transacciones</h2>
 
-    <div class="ultimasTransacciones">
+    <div class="ultimasTransacciones" aria-label="Lista de últimas transacciones">
       <div class="conjunto-transaccion">
         <div class="gasto">
           <div class="icono-titulo">
@@ -186,8 +186,7 @@
     </div>
 
   </footer>
-
-  <div class="opcionAñadir">
+  <div class="opcionAñadir" aria-label="Opción para añadir transacción">
     <div class="cerrar">
       <img src="img/flechaAtras.svg" alt="Cerrar" />
     </div>
@@ -297,7 +296,7 @@
     </form>
   </div>
 
-  <div id="overlay"></div>
+  <div id="overlay" aria-hidden="true"></div>
 
   <script type="module" src="js/home.js"></script>
 </body>
